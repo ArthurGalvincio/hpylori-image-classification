@@ -19,8 +19,6 @@ st.markdown("""
 Faça upload de um arquivo ZIP contendo suas imagens (tiles) para classificá-las.
 """)
 
-st.warning(f"Certifique-se de que sua API FastAPI está rodando em `{API_BASE_URL}`.")
-
 # --- Opção de Upload de Arquivo ZIP ---
 uploaded_zip_file = st.file_uploader(
     "Faça upload de um arquivo ZIP contendo suas imagens (tiles)",
