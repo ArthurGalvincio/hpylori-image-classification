@@ -8,8 +8,8 @@ Este projeto é um modelo inicial de framework para treinar, avaliar e implement
 
 1.  **Clonar o Repositório:**
     ```bash
-    git clone <https://github.com/ArthurGalvincio/hpylori-image-classification>
-    cd classifier
+    git clone https://github.com/ArthurGalvincio/hpylori-image-classification
+    cd Classificador
     ```
 
 2.  **Criar e Ativar Ambiente Virtual:**
@@ -22,7 +22,7 @@ Este projeto é um modelo inicial de framework para treinar, avaliar e implement
     ```
 
 3.  **Instalar Dependências:**
-    * Crie um arquivo `requirements.txt` na raiz do projeto (`classifier/`) com as seguintes dependências:
+    * Crie um arquivo `requirements.txt` na raiz do projeto (`classificador/`) com as seguintes dependências:
         ```
         torch
         torchvision
