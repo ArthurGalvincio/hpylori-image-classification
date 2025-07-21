@@ -31,7 +31,7 @@ uploaded_zip_file = st.file_uploader(
 if uploaded_zip_file is not None:
     st.subheader("Escolha a Ação:")
 
-    col1, col2 = st.columns(3)
+    col1, col2 = st.columns(2)
 
     # --- Opção 1: Visualizar Resultados Direto na API (JSON) ---
     with col1:
