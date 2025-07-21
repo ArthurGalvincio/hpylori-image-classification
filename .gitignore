@@ -1,0 +1,14 @@
+data/processed
+data/raw
+my-env/
+.vscode/
+src/__pycache__/
+src/main/__pycache__/
+src/training/__pycache__/
+src/models/__pycache__/
+src/utils/__pycache__/
+src/indices
+*.pth
+*.pkl
+*.h5
+*.weights

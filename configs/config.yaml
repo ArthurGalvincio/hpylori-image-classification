@@ -1,0 +1,69 @@
+# Configuração Base - Template para diferentes modelos
+# Copie este arquivo e modifique o campo 'model' para testar diferentes arquiteturas
+
+# Configurações do Dataset
+data:
+  root_path: "/data/processed/giemsa"
+  indices_path: "/src/indices/indices.pth"
+  num_classes: 2
+  class_names: ["negative", "positive"]
+  
+# Divisão do Dataset
+splits:
+  train_ratio: 0.7
+  val_ratio: 0.15
+  test_ratio: 0.15
+  stratified: true
+  seed: 42
+  
+# Transformações
+transforms:
+  img_size: 224  # 299 para Inception V3
+  normalize: true
+  augmentation:
+    train: "medium"  # light, medium, heavy
+    val: "none"
+    
+# DataLoader
+dataloader:
+  batch_size: 32  # Pode precisar ajustar baseado na GPU
+  num_workers: 4
+  pin_memory: true
+  persistent_workers: true
+
+# Modelo - ALTERE AQUI PARA TESTAR DIFERENTES MODELOS
+model:
+  name: "vgg16"  # Opções: vgg16, resnet50, inception_v3
+  pretrained: true
+  freeze_layers: true  # Congela camadas de feature extraction
+  dropout: 0.5
+  
+# Treinamento
+training:
+  epochs: 10
+  learning_rate: 0.001
+  weight_decay: 0.0001
+  optimizer: "adam"  # adam, sgd
+  scheduler:
+    name: "reduce_on_plateau"  # reduce_on_plateau, cosine, step
+    patience: 5
+    factor: 0.5
+    min_lr: 0.000001
+  early_stopping:
+    patience: 15
+    min_delta: 0.001
+    
+# Configurações do experimento
+experiment:
+  name: "base_experiment"  # Será sobrescrito por configs específicos
+  save_dir: "/models/saved"
+  log_dir: "/logs"
+  results_dir: "/results"
+  save_best_only: true
+  verbose: true
+  
+# Configurações de reprodutibilidade
+reproducibility:
+  seed: 42
+  deterministic: true
+  benchmark: false

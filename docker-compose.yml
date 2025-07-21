@@ -1,0 +1,13 @@
+services:
+  dev:
+    build: .
+    image: classifier-dev:latest
+    container_name: classifier-dev
+    volumes:
+      - ./:/workspace
+      - ./data:/workspace/data
+      - ./models:/workspace/models
+      - ./results:/workspace/results
+      - ./logs:/workspace/logs
+    ports:
+      - "8888:8888"
