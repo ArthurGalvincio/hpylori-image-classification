@@ -1,6 +1,6 @@
-# 🔬 Sistema Modular de Classificação de Imagens Médicas
+# 🔬 Sistema de Classificação de Imagens Médicas
 
-Este projeto é um modelo inicial de framework flexível e modular para treinar, avaliar e implementar modelos de Deep Learning em tarefas de classificação binária de imagens médicas. Ideal para pesquisadores e desenvolvedores que buscam uma solução robusta e customizável.
+Este projeto é um modelo inicial de framework para treinar, avaliar e implementar modelos de Deep Learning em tarefas de classificação binária de imagens médicas. Ideal para pesquisadores e desenvolvedores que buscam uma solução robusta e customizável.
 
 **Nota:** Um relatório detalhado referente a este projeto, desenvolvido para a disciplina de **Introdução à Inteligência Artificial**, está disponível no repositório.
 
